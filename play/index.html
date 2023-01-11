@@ -88,7 +88,7 @@
                 </ul> -->
                 <!-- <a class="logo" href="/">铌视频定制版社区</a> -->
                 <ul class="layui-nav layui-layout-right">
-                    <li class="layui-nav-item layui-show-md-inline-block layui-this">
+                    <li class="layui-nav-item layui-show-md-inline-block">
                         <a id="home" href="/">首页</a>
                     </li>
                 </ul>
@@ -144,6 +144,22 @@
         <script src="https://cdn.jsdelivr.net/npm/dplayer/dist/DPlayer.min.js"></script>
         
         <script>
+            var locationHref = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+            var locationHrefObject = {};
+            locationHref.forEach(function (val) {
+                var parameter = val.slice(0, val.indexOf('=')); //属性
+                var data = val.slice(val.indexOf('=') + 1); //值
+                locationHrefObject[parameter] = decodeURI(data);
+            })
+            if(locationHrefObject["ep"]!=undefined && locationHrefObject["ep"]>0 && locationHrefObject["ep"]<=13){
+                document.getElementById("tit").innerText = "【氢气烤肉架】别当欧尼酱了 在线观看 第"+locationHrefObject["ep"]+"话";
+                m3u8url = "https://old.why-cdn.tk/video/onimai/ep"+locationHrefObject["ep"]+".m3u8"
+            }
+            else{
+                window.location.href="/play?ep=1";
+            }
+        </script>
+        <script>
             // var script1=document.createElement('script');//创建script标签节点
             // script1.setAttribute('type','text/javascript');//设置script类型
             // script1.setAttribute('src','https://cdn.jsdelivr.net/npm/dplayer/dist/DPlayer.min.js');//设置js地址
@@ -171,50 +187,40 @@
                                 // type: 'auto',
                                 quality: [
                                     {
-                                        name: 'FLV 1080P',
-                                        url: 'https://old.why-cdn.tk/Never_Gonna_Give_You_Up/Never_Gonna_Give_You_Up.flv',
-                                        type: 'flv'
-                                    },
-                                    {
-                                        name: 'MP4 1080P',
-                                        url: 'https://old.why-cdn.tk/Never_Gonna_Give_You_Up/Never_Gonna_Give_You_Up.mp4',
-                                        type: 'normal'
-                                    },
-                                    {
                                         name: 'HLS 1080P',
-                                        url: 'https://old.why-cdn.tk/Never_Gonna_Give_You_Up/Never_Gonna_Give_You_Up.m3u8',
+                                        url: m3u8url,
                                         type: 'hls'
                                     },
                                 ],
-                                defaultQuality: 2,
+                                defaultQuality: 0,
                             },
-                            subtitle: {
-                                url: [
-                                    {
-                                        url: 'https://old.why-cdn.tk/Never_Gonna_Give_You_Up/sub_en-us.vtt',
-                                        lang: 'en-us',
-                                        name: '官方英语字幕',
-                                    },
-                                    {
-                                        url: 'https://old.why-cdn.tk/Never_Gonna_Give_You_Up/sub_zh-cn.vtt',
-                                        lang: 'zh-cn',
-                                        name: '官方简体中文字幕',
-                                    },
-                                    {
-                                        url: 'https://old.why-cdn.tk/Never_Gonna_Give_You_Up/sub_zh-cn_fun.vtt',
-                                        lang: 'fu-cn',
-                                        name: '中文（中国）整活版字幕',
-                                    },
-                                ],
-                                defaultSubtitle: 7,
-                                type: 'webvtt',
-                                fontSize: '50px',
-                                bottom: '10%',
-                                color: '#66ccff'
-                                // fontSize: '40px',
-                                // bottom: '40px',
-                                // color: '#66ccff'
-                            },
+                            // subtitle: {
+                            //     url: [
+                            //         {
+                            //             url: 'https://old.why-cdn.tk/Never_Gonna_Give_You_Up/sub_en-us.vtt',
+                            //             lang: 'en-us',
+                            //             name: '官方英语字幕',
+                            //         },
+                            //         {
+                            //             url: 'https://old.why-cdn.tk/Never_Gonna_Give_You_Up/sub_zh-cn.vtt',
+                            //             lang: 'zh-cn',
+                            //             name: '官方简体中文字幕',
+                            //         },
+                            //         {
+                            //             url: 'https://old.why-cdn.tk/Never_Gonna_Give_You_Up/sub_zh-cn_fun.vtt',
+                            //             lang: 'fu-cn',
+                            //             name: '中文（中国）整活版字幕',
+                            //         },
+                            //     ],
+                            //     defaultSubtitle: 7,
+                            //     type: 'webvtt',
+                            //     fontSize: '50px',
+                            //     bottom: '10%',
+                            //     color: '#66ccff'
+                            //     // fontSize: '40px',
+                            //     // bottom: '40px',
+                            //     // color: '#66ccff'
+                            // },
                             // danmaku: {
                             //     id: 'NBVIDEO<?php echo $row['vno'] ?>',
                             //     api: 'https://dplayer.moerats.com/',
