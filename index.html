@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>别酱了在线观看 - 氢气烤肉架字幕组</title>
+        <meta content="氢气烤肉架,h-bbr,别当欧尼酱了,不当哥哥了" name="description">
+        <meta name="description" content="别酱了在线观看是氢气烤肉架字幕组建立的在线观看网站">
+        <!-- 引入 layui.css -->
+        <link rel="stylesheet" href="https://old.why-cdn.tk/layui_v2.6.8/css/layui.css">
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/layui/2.6.8/css/layui.min.css"> -->
+        <style>
+            .top {
+                background-color: rgb(57,61,73);
+            }
+            .logo {
+                color: rgb(196,197,201);
+                font-size: 35px;
+                margin-left: 15px;
+                font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+            .logo:hover {
+                color: rgb(221, 221, 221);
+            }
+            p {
+                margin-top: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- 对于未开启JavaScript的浏览器应该会显示的内容（在该浏览器的css渲染功能正常的情况下） -->
+        <div id="nojs" style="font-size: 50px;">当前监测到您的浏览器不允许JavaScript脚本运行！可能是浏览器不支持或权限不允许。
+            为了正常的使用本站，请打开JavaScript权限或更换支持JavaScript的浏览器！</br>
+            当然，也有可能是页面加载展示出错了，请刷新页面再试一次。
+        </div>
+        <div id="allpage" style="display: none;">
+            <!-- 头部导航栏 -->
+            <div class="top layui-header">
+                <div class="logo layui-hide-xs layui-bg-black"><a href="/" style="color: white;">WHY工作室</a></div>
+                <!-- <ul class="layui-nav layui-layout-left">
+                    <li class="layui-nav-item"><a href="">Exam</a></li>
+                </ul> -->
+                <!-- <a class="logo" href="/">铌视频定制版社区</a> -->
+                <ul class="layui-nav layui-layout-right">
+                    <li class="layui-nav-item layui-show-md-inline-block layui-this">
+                        <a id="home" href="/">首页</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- 导航栏结束 -->
+            <!-- 接下来是页面主体部分 -->
+            <div id="top-carousel"><!-- 滚动展示框 -->
+                <div class="layui-carousel" id="main-carousel">
+                    <div carousel-item>
+                        <div style="background-color: rgb(31, 150, 248);"><p style="text-align:center;color: rgb(255, 255, 255);font-size: 70px;margin-top: 2.5%;">欢迎观看！</p></div>
+                        <div style="background-color: rgb(126, 255, 126);"><p style="text-align:center;color: white;font-size: large;margin-top: 100px;">欢迎观看</p></div>
+                    </div>
+                </div>
+            </div>
+            <div id="main-contents" style="margin-top: 20px;margin-left: 10.9%;margin-right: 10.9%;">
+                <!-- 在此div下写主页应该展示的内容 -->
+                <h1 style="text-align: center;">别酱了在线观看</h1>
+                </br>
+                <p style="text-align: center;"><a id="play" href="/play/">点击此处前往播放器</a></p>
+                </br>
+                
+                <hr>
+                <p style="text-align: center;color: grey;">© 2023 WHY-Studio & Xiaowan Software</p>
+            </div>
+        </div>
+        <script>
+            // 检测浏览器的JavaScript以及Cookie权限
+            document.getElementById('nojs').style.display='none';
+            document.getElementById('allpage').style.display='';
+            if(!(document.cookie || navigator.cookieEnabled)){
+                alert('您的浏览器不支持cookie或禁止了本站使用cookie!'+
+                '本站需要使用cookie存储您的登录令牌、访客编号等信息，'+
+                '不打开将可能无法正常使用本站服务！');
+                layer.open({
+                    title: '您的浏览器不支持cookie或禁止了本站使用cookie!',
+                    content: '本站需要使用cookie存储您的登录令牌、访客编号等信息，'+
+                        '不打开将可能无法正常使用本站服务！',
+                    icon:2
+                });  
+            }
+            
+        </script>
+        <!-- 引入 layui.js -->
+        <script src="https://old.why-cdn.tk/layui_v2.6.8/layui.js" ></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/layui/2.6.8/layui.js" ></script> -->
+        <script>
+            layui.use('carousel', function(){
+              var carousel = layui.carousel;
+              //建造实例
+              carousel.render({
+                elem: '#main-carousel'
+                ,width: '100%' //设置容器宽度
+                ,arrow: 'always' //始终显示箭头
+                //,anim: 'updown' //切换动画方式
+              });
+            });
+        </script>
+    </body>
+</html>
