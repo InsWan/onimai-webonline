@@ -94,10 +94,10 @@
                     <li class="layui-nav-item layui-show-md-inline-block">
                         <a id="home" href="/">首页</a>
                     </li>
-                    <li class="layui-nav-item layui-show-md-inline-block layui-this">
+                    <li class="layui-nav-item layui-show-md-inline-block">
                         <a id="play" href="/play/">回放</a>
                     </li>
-                    <li class="layui-nav-item layui-show-md-inline-block">
+                    <li class="layui-nav-item layui-show-md-inline-block layui-this">
                         <a id="play" href="/play/live.html">直播</a>
                     </li>
                 </ul>
@@ -105,17 +105,19 @@
             <!-- 导航栏结束 -->
             <!-- 接下来是页面主体部分 -->
             <div class="main_contect">
-                <h1 id="tit">【氢气烤肉架】别当欧尼酱了 在线观看</h1>
-                <h3>
+                <h1 id="tit">【氢气烤肉架/生肉】AT-X电视台直播</h1>
+                <!-- <h3>
                     <i>
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="6" width="18" height="11.5" rx="2" fill="#FF6699"></rect><path d="M5.7 8.36V12.79C5.7 13.72 5.96 14.43 6.49 14.93C6.99 15.4 7.72 15.64 8.67 15.64C9.61 15.64 10.34 15.4 10.86 14.92C11.38 14.43 11.64 13.72 11.64 12.79V8.36H10.47V12.81C10.47 13.43 10.32 13.88 10.04 14.18C9.75 14.47 9.29 14.62 8.67 14.62C8.04 14.62 7.58 14.47 7.3 14.18C7.01 13.88 6.87 13.43 6.87 12.81V8.36H5.7ZM13.0438 8.36V15.5H14.2138V12.76H15.9838C17.7238 12.76 18.5938 12.02 18.5938 10.55C18.5938 9.09 17.7238 8.36 16.0038 8.36H13.0438ZM14.2138 9.36H15.9138C16.4238 9.36 16.8038 9.45 17.0438 9.64C17.2838 9.82 17.4138 10.12 17.4138 10.55C17.4138 10.98 17.2938 11.29 17.0538 11.48C16.8138 11.66 16.4338 11.76 15.9138 11.76H14.2138V9.36Z" fill="white"></path></svg>
                     </i>
                     氢气烤肉架
-                </h3>
+                </h3> -->
                 <p></p>
                 <div id="dplayer"></div>
                 <!-- <iframe style="width: 100%;height: 800px" src="https://player.bilibili.com/player.html?aid=80433022&bvid=BV1GJ411x7h7&cid=137649199&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe> -->
-                <p id="jianjie">欢迎观看</p>
+                <p id="jianjie">
+                    <img style="width: 95%;" src="https://old.why-cdn.tk/animepic/onimai/h-bbr/onimai.jpg"></p>
+                </p>
                 <hr />
                 </br></br>
                 <p>评论区暂不可用！</p>
@@ -123,7 +125,7 @@
             <div class="main_right">
                 <div class="right_upinfo">
                     <p>
-                        <a style="font-size: 20px;">氢气烤肉架 H-BBR</a>
+                        <a style="font-size: 20px;">AT-X</a>
                         <i style="width: 24px; height: 24px;top: 10px;">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="6" width="18" height="11.5" rx="2" fill="#FF6699"></rect><path d="M5.7 8.36V12.79C5.7 13.72 5.96 14.43 6.49 14.93C6.99 15.4 7.72 15.64 8.67 15.64C9.61 15.64 10.34 15.4 10.86 14.92C11.38 14.43 11.64 13.72 11.64 12.79V8.36H10.47V12.81C10.47 13.43 10.32 13.88 10.04 14.18C9.75 14.47 9.29 14.62 8.67 14.62C8.04 14.62 7.58 14.47 7.3 14.18C7.01 13.88 6.87 13.43 6.87 12.81V8.36H5.7ZM13.0438 8.36V15.5H14.2138V12.76H15.9838C17.7238 12.76 18.5938 12.02 18.5938 10.55C18.5938 9.09 17.7238 8.36 16.0038 8.36H13.0438ZM14.2138 9.36H15.9138C16.4238 9.36 16.8038 9.45 17.0438 9.64C17.2838 9.82 17.4138 10.12 17.4138 10.55C17.4138 10.98 17.2938 11.29 17.0538 11.48C16.8138 11.66 16.4338 11.76 15.9138 11.76H14.2138V9.36Z" fill="white"></path></svg>
                         </i>
@@ -134,7 +136,8 @@
                 <div class="right_recommend">
                     <!-- <p>推荐视频不可用</p> -->
                     <!-- <p>敬请期待！</p> -->
-                    <table id="eplist" lay-filter="eps"></table>
+                    <!-- <table id="eplist" lay-filter="eps"></table> -->
+                    <p style="text-align: center;color: red;">暂无节目单（懒得弄）</p>
                     <hr>
                     <p style="text-align: center;color: grey;">© 2023 WHY-Studio & Xiaowan Software</p>
                 </div>
@@ -171,7 +174,7 @@
         <script src="https://cdn.jsdelivr.net/webtorrent/latest/webtorrent.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/dplayer/dist/DPlayer.min.js"></script>
         
-        <script>
+        <!-- <script>
             var locationHref = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
             var locationHrefObject = {};
             locationHref.forEach(function (val) {
@@ -186,7 +189,7 @@
             else{
                 window.location.href="/play?ep=1";
             }
-        </script>
+        </script> -->
         <script>
             // var script1=document.createElement('script');//创建script标签节点
             // script1.setAttribute('type','text/javascript');//设置script类型
@@ -205,6 +208,7 @@
                             lang: 'zh-cn',
                             screenshot: false,
                             hotkey: true,
+                            live: true,
                             // preload: 'none',
                             // logo: '/static/LOGO.png',
                             volume: 0.7,
@@ -215,8 +219,8 @@
                                 // type: 'auto',
                                 quality: [
                                     {
-                                        name: 'HLS 1080P',
-                                        url: m3u8url,
+                                        name: 'HLS live',
+                                        url: "https://sub.neetball.net/live/neet.m3u8",
                                         type: 'hls'
                                     },
                                 ],
@@ -290,11 +294,12 @@
                         // dp.play();
                 // }
             // }
+            layer.msg('CORS错误请自行解决！');
         </script>
         <!-- 引入 layui.js -->
         <script src="https://old.why-cdn.tk/layui_v2.6.8/layui.js" ></script>
         <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/layui/2.6.8/layui.js" ></script> -->
-        <script>
+        <!-- <script>
             layui.use('carousel', function(){
               var carousel = layui.carousel;
               //建造实例
@@ -305,8 +310,8 @@
                 //,anim: 'updown' //切换动画方式
               });
             });
-        </script>
-        <script>
+        </script> -->
+        <!-- <script>
             layui.use('table', function(){
               var table = layui.table;
               
@@ -362,6 +367,6 @@
               
             });
             
-        </script>
+        </script> -->
     </body>
 </html>
