@@ -118,7 +118,25 @@
                 <p id="jianjie">欢迎观看</p>
                 <hr />
                 </br></br>
-                <p>评论区暂不可用！</p>
+                <div id="disqus_thread"></div>
+                <script>
+                    /**
+                    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+                    /*
+                    var disqus_config = function () {
+                    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                    };
+                    */
+                    (function() { // DON'T EDIT BELOW THIS LINE
+                    var d = document, s = d.createElement('script');
+                    s.src = 'https://onimai-onlineview.disqus.com/embed.js';
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                    })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
             </div>
             <div class="main_right">
                 <div class="right_upinfo">
@@ -180,6 +198,7 @@
                 locationHrefObject[parameter] = decodeURI(data);
             })
             if(locationHrefObject["ep"]!=undefined && locationHrefObject["ep"]>0 && locationHrefObject["ep"]<=13){
+                document.title='别酱了在线观看 第'+locationHrefObject["ep"]+'话 - 氢气烤肉架字幕组';
                 document.getElementById("tit").innerText = "【氢气烤肉架】别当欧尼酱了 在线观看 第"+locationHrefObject["ep"]+"话";
                 m3u8url = "https://old.why-cdn.tk/video/onimai/ep"+locationHrefObject["ep"]+".m3u8"
             }
@@ -363,5 +382,6 @@
             });
             
         </script>
+        <script id="dsq-count-scr" src="//onimai-onlineview.disqus.com/count.js" async></script>
     </body>
 </html>
