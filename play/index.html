@@ -228,12 +228,30 @@
                 document.title='别酱了在线观看 第'+locationHrefObject["ep"]+'话 - 氢气烤肉架字幕组';
                 document.getElementById("tit").innerText = "【氢气烤肉架】别当欧尼酱了 在线观看 第"+locationHrefObject["ep"]+"话";
                 m3u8url = "https://old.why-cdn.tk/video/onimai/ep"+locationHrefObject["ep"]+".m3u8"
+                epid = locationHrefObject["ep"];
             }
             else{
                 window.location.href="/play?ep=1";
             }
+            
         </script>
         <script>
+            var chmarkdata = [];
+            var httpRequest = new XMLHttpRequest();//第一步：建立所需的对象
+            httpRequest.open('GET', 'mark.json', true);//第二步：打开连接  将请求参数写在url中  ps:"http://localhost:8080/rest/xxx"
+            httpRequest.send();//第三步：发送请求  将请求参数写在URL中
+            /**
+             * 获取数据后的处理程序
+             */
+            httpRequest.onreadystatechange = function () {
+                if (httpRequest.readyState == 4 && httpRequest.status == 200) {
+                    var jsondata = httpRequest.responseText;//获取到json字符串，还需解析
+                    // console.log(json);
+                    markdata = JSON.parse(jsondata);
+                    // console.log("当前集数："+epid);
+                    // console.log(markdata["data"]["ep"+epid]);
+                    chmarkdata = markdata["data"]["ep"+epid];
+                
             // var script1=document.createElement('script');//创建script标签节点
             // script1.setAttribute('type','text/javascript');//设置script类型
             // script1.setAttribute('src','https://cdn.jsdelivr.net/npm/dplayer/dist/DPlayer.min.js');//设置js地址
@@ -243,6 +261,7 @@
             // script1.onload=script1.onreadystatechange=function(){
                 //如果script1加载成功则创建script2引入，这样就不会由于后面的js依赖前面的js导致后面的js先加载而导致程序报错
                 // if(!this.readyState||this.readyState=='loaded'||this.readyState=='complete'){
+                    // setTimeout(100);
                         const dp = new DPlayer({
                             container: document.getElementById('dplayer'),
                             autoplay: true,
@@ -252,7 +271,7 @@
                             screenshot: false,
                             hotkey: true,
                             // preload: 'none',
-                            // logo: '/static/LOGO.png',
+                            logo: '/favicon.ico',
                             volume: 0.7,
                             // mutex: true,
                             // airplay: true,
@@ -331,11 +350,20 @@
                                     },
                                 },
                             ],
-                            // highlight: [],
+                            highlight: chmarkdata,
+                            // highlight: [
+                            //     {"time": chmarkdata[0]["time"],"text": chmarkdata[0]["text"]},
+                            //     {"time": chmarkdata[1]["time"],"text": chmarkdata[1]["text"]},
+                            //     {"time": chmarkdata[2]["time"],"text": chmarkdata[2]["text"]},
+                            //     {"time": chmarkdata[3]["time"],"text": chmarkdata[3]["text"]},
+                            // ],
                         });
                         // dp.play();
                 // }
             // }
+        }
+            };
+            
         </script>
         <!-- 引入 layui.js -->
         <script src="https://old.why-cdn.tk/layui_v2.6.8/layui.js" ></script>
