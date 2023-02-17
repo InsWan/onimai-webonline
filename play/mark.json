@@ -8,6 +8,7 @@
         "ep3": [{"time":37.02,"text":"OP Start"},{"time":126.97,"text":"OP End"},{"time":1318.05,"text":"ED Start"},{"time":1408.04,"text":"ED End"}],
         "ep4": [{"time":81.02,"text":"OP Start"},{"time":171.05,"text":"OP End"},{"time":1304.08,"text":"ED Start"},{"time":1394.02,"text":"ED End"}],
         "ep5": [{"time":41.06,"text":"OP Start"},{"time":131.02,"text":"OP End"},{"time":1325.01,"text":"ED Start"},{"time":1415.01,"text":"ED End"}],
-        "ep6": [{"time":47.06,"text":"OP Start"},{"time":137.03,"text":"OP End"},{"time":1325.05,"text":"ED Start"},{"time":1415.05,"text":"ED End"}]
+        "ep6": [{"time":47.06,"text":"OP Start"},{"time":137.03,"text":"OP End"},{"time":1325.05,"text":"ED Start"},{"time":1415.05,"text":"ED End"}],
+        "ep7": [{"time":82.98,"text":"OP Start"},{"time":173.03,"text":"OP End"},{"time":1325.01,"text":"ED Start"},{"time":1415.01,"text":"ED End"}]
     }
 }
